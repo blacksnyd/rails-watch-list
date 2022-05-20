@@ -2,5 +2,6 @@
 
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
+  <%= f.input :bg_list, as: :file %>
   <%= f.button :submit %>
 <% end %>
