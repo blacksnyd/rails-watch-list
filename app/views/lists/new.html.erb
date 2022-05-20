@@ -1,7 +1,10 @@
-<h1>Add list</h1>
-
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :bg_list, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+<h1 class="text-center mt-5">Add list</h1>
+<div class="form-container p-5">
+  <div class="form">
+    <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.input :bg_list, as: :file %>
+    <%= f.button :submit, class: "btn btn-flat" %>
+  <% end %>
+  </div>
+</div>

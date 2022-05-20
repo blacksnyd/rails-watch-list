@@ -1,8 +1,15 @@
-<div class="cards">
+<h1 class="text-center mt-5">My watch lists</h1>
+<div class="cards p-5">
 <% @lists.each do |list| %>
-
+  <%= link_to list_path(list) do %>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.bg_list.attached? ? cl_image_path(list.bg_list.key) : image_path("bg_default.jpg") %>)">
-    <%= link_to list.name, list_path(list) %>
+    <%= list.name %>
   </div>
+  <% end %>
 <% end %>
+  <%= link_to new_list_path do %>
+  <div class="card-add" style="background-color: gray;">
+    +
+  </div>
+  <% end %>
 </div>
